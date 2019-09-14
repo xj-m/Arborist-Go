@@ -1,40 +1,12 @@
-const postButton = $('button#postButton');
-const posterName = $('input#posterName');
-const postContent = $('textarea#postContent');
-// assign del func for every del button
-Array.from(document.querySelectorAll('.delBtn')).forEach(function (button) {
-    $('#' + button.id).on('click', () => {
-        $.ajax({
-            type: 'POST',
-            url: '/del_post',
-            data: {
-                id: button.id
-            },
-            success: function (data) {
-                if (data == 'success') {
-                    location.reload();
-                }
-            }
-        });
-    });
-});
+const loginBtn = $('button#loginBtn');
+const userEmail = $('input#userName');
+const userPsw = $('input#userPsw');
 
-postButton.on('click', () => {
-    console.log('post Btn clicked');
-    let posterName = posterName.val();
-    let postContent = postContent.val();
-
+loginBtn.on('click', () => {
+    console.log('login btn clicked');
     $.ajax({
-        type: 'POST',
-        url: '/submit_post',
-        data: {
-            posterName: posterName,
-            postContent: postContent
-        },
-        success: function (data) {
-            if (data == 'success') {
-                location.reload();
-            }
-        }
+        type: 'GET',
+        url: '/login',
+        success: function (data) {}
     });
 });
