@@ -1,0 +1,273 @@
+<doctype HTML>
+    <html>
+
+    <head>
+        <title>cs400 p6 Web Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesjheet" href="home.css">
+    </head>
+    <meta charset="UTF-8">
+
+    <body>
+        <div class="container">
+            <h1>Xiangjun</h1>
+            <!--  for section 1: order list -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Order List</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class='card-tittle'>
+                                <h3>My favorite things</h3>
+                            </div>
+                            <ol type="1">
+                                <li>Foods</li>
+                                <li>Sofa</li>
+                                <li>Grandma's house</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for table -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>read from db</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class=card-tittle>
+                                <h3>Announcements display table</h3>
+                            </div>
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Poster Name</th>
+                                        <th scope="col">Post Content</th>
+                                        <th scope="col">Ann ID</th>
+                                        <th scope="col">Del this ann</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% for(var i=0;i<announcements.length;i++) { %>
+                                    <tr>
+                                        <th scope="row"><% i %></th>
+                                        <td><%= announcements[i].posterName %></td>
+                                        <td><%= announcements[i].postContent %></td>
+                                        <td><%= announcements[i].id %></td>
+                                        <td><button class="delBtn btn btn-primary" type="button"
+                                                id=<%= announcements[i].id %>>Del
+                                                Ann</button></td>
+                                    </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for post announcement  -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Submit form</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-tittle">
+                                <h3>Post your announcement</h3>
+                            </div>
+
+                            <form method="POST" action="/submit_post">
+                                <div class="form-group">
+                                    <label for="posterName" class="col-form-label">Poster Name</label>
+                                    <input type="text" class="form-control" id="posterName" name="posterName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="postContent" class="col-form-label">Post Content</label>
+                                    <textarea type="text" class="form-control" id="postContent"
+                                        placeholder="please input text" name='postContent'>
+                                </textarea>
+                                </div>
+                                <button type="submit" id="postBtn" class="btn btn-primary">Submit</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 2: unordered list -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Unordered List</h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='card-tittle'>
+                                <h3>Something else</h3>
+                            </div>
+                            <ul>
+                                <li>fish</li>
+                                <li>eggs</li>
+                                <li>nuts </li>
+                                <li>seeds</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 3: image -->
+            <div class="row">
+                <div class="col">
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h2>Image </h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='card-tittle'>
+                                <h3>My image</h3>
+                            </div>
+                            <img src="Chroma.jpg" alt="chroma" width="300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 4: table -->
+            <div class="row">
+                <div class="col">
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h2>Table</h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='card-tittle'>
+                                <h3>My schedule</h3>
+                            </div>
+                            <table class="table table-bordered ">
+                                <tr>
+                                    <th>05-03</th>
+                                    <th>05-04</th>
+                                    <th>05-05</th>
+                                    <th>05-06</th>
+                                    <th>05-07</th>
+                                    <th>05-08</th>
+                                    <th>05-09</th>
+                                    <th>05-10</th>
+                                    <th>05-11</th>
+                                </tr>
+                                <tr>
+                                    <th>CS400</th>
+                                    <th>CS506</th>
+                                    <th>CS564</th>
+                                    <th>CS577</th>
+                                    <th>CS577</th>
+                                    <th>CS564</th>
+                                    <th>CS577</th>
+                                    <th>CS577</th>
+                                    <th>CS577</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 5: glossary of terms -->
+            <div class='row'>
+                <div class='col'>
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h2>Description List</h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='card-tittle'>
+                                <h3>CS400 terms</h3>
+                            </div>
+                            <dl>
+                                <dt>Subset</dt>
+                                <dd>A set A is a subset of another set B, if all members of A exist in B. Thus,
+                                    a set is also a subset of itself while a proper subset is a subset that is
+                                    not also equal to the original set. Example: The set of vowels (smaller
+                                    circle) is a subset of the set of all letters (larger circle).</dd>
+                                <dt>Superset</dt>
+                                <dd>A set B is a superset of set A, if B contains all elements of A and
+                                    additional elements that are not found in A. Example: The set of letters
+                                    (larger circle) is a superset of the set of vowels (smaller circle).</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 6: button or user interface -->
+            <div class='row'>
+                <div class='col'>
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h2>interface: Collapse</h2>
+                        </div>
+                        <div class='card-body'>
+                            <div class='card-tittle'>
+                                <h3>User Interface</h3>
+                            </div>
+                            <p>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Button with data-target
+                                </button>
+                            </p>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <p>this is the collapse example from Bootstrap, if this content is visible before
+                                        clicking the button, then it means that the collapse may not working, and reason
+                                        can be net network connection problem, since Bootstrap need links for CSS or JS
+                                    </p>
+                                </div>
+                            </div>
+                            <p>
+                                The source of this part of code: <a class="btn btn-primary"
+                                    href="https://getbootstrap.com/docs/4.3/components/collapse/">https://getbootstrap.com/docs/4.3/components/collapse/</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- for section 7: link to another page   -->
+            <div class='row'>
+                <div class='col'>
+                    <div class='card'>
+                        <div class='card-header'>
+                            <h2>Link</h2>
+                        </div>
+                        <div class='card-body text-center'>
+                            <div class='card-tittle'>
+                            </div>
+                            <a href="pageA.html" class="btn btn-primary stretched-link">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+            <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </body>
+    <footer>
+        <p>Posted by: Xiangjun Ma</p>
+        <p>Contact information: <a href="mailto:xma273@wisc.edu">
+                xma273@wisc.cdu</a>.</p>
+    </footer>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    </html>

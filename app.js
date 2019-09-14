@@ -1,4 +1,3 @@
-let createError = require('http-errors');
 let express = require('express');
 let firebase = require('firebase');
 let path = require('path');
@@ -18,13 +17,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let indexRouter = require('./controllers/index');
-const errorController = require('./controllers/error');
+// const errorController = require('./controllers/error');
 
 let app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
+app.set('view engine', 'ejs')
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
@@ -35,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 
 // error handler
-app.use(errorController.get404);
+// app.use(errorController.get404);
 
 // Setting up port
 const port = process.env.PORT || 1109;
