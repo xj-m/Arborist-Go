@@ -41,6 +41,8 @@ app.use('/', userRouter);
 app.use('/', loginRouter);
 app.use('/', surveyRouter);
 app.use('/', testRouter);
+app.use('/', personRouter);
+
 // error handler
 // app.use(errorController.get404);
 

@@ -33,19 +33,31 @@
                 <div class="card">
                     <div class="card-header">
                         <h2>Your Forest</h2>
-                        <form method="POST" action="/add_tree">
+                        <!-- for make data: start -->
+                        <form method="POST" action="/person/add_tree">
                             <div class="form-group">
-                                <label for="treeName">Tree Name</label>
-                                <input type="text" class="form-control" name="treeName" id="treeName"
-                                    placeholder="Enter tree name">
+                                <label>treeLoc</label>
+                                <input type="text" class="form-control" name="treeLoc">
                             </div>
                             <div class="form-group">
-                                <label for="treeLoc">Tree Location: 7</label>
-                                <input type="text" class="form-control" name="userPsw" id="userPsw"
-                                    placeholder="Enter tree location">
+                                <label>status</label>
+                                <input type="text" class="form-control" name="status">
                             </div>
-                            <button type="submit" class="btn btn-primary" id='submitTreeBtn'>submit</button>
+                            <div class="form-group">
+                                <label>name</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label>date</label>
+                                <input type="text" class="form-control" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label>pictures</label>
+                                <input type="text" class="form-control" name="pictures">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id='postTreeBtn'>submit</button>
                         </form>
+                        <!-- for make data: ends -->
                     </div>
                     <div class="card-body">
                         <div class="card-tittle">

@@ -2,10 +2,10 @@ let express = require('express');
 let router = express.Router();
 let firebase = require('firebase');
 let db = firebase.firestore();
+var user = firebase.auth().currentUser;
 
 
 router.get('/login', function (req, res) {
-    var user = firebase.auth().currentUser;
     if (user) {
         console.log('GET user login');
         res.render('user', {
