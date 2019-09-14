@@ -3,9 +3,6 @@ let router = express.Router();
 let firebase = require("firebase");
 let db = firebase.firestore();
 
-router.get('/', function (req, res) {
-    console.log('GET index');
-    res.render('index');
-});
+router.get('/person/add_tree', function (req, res) {
 
-module.exports = router;
+});

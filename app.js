@@ -1,5 +1,5 @@
 let express = require('express');
-let firebase = require('firebase');
+var firebase = require('firebase');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 
@@ -21,6 +21,8 @@ let userRouter = require('./controllers/user');
 let loginRouter = require('./controllers/login');
 let surveyRouter = require('./controllers/survey');
 let testRouter = require('./controllers/test');
+let personRouter = require('./controllers/person');
+
 // const errorController = require('./controllers/error');
 
 let app = express();

@@ -10,6 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="text/javascript" src="js/login.js"></script>
 </head>
 
 <body>
@@ -18,32 +19,69 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">Account login</div>
+                    <div class="card-header">
+                        <h2>Account login</h2>
+                    </div>
                     <div class="card-body">
-                        <form method="POST" action="/submit_login">
+                        <form method="POST" action="/post_log">
                             <div class="form-group">
                                 <label for="userEmail">Email address</label>
-                                <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp"
-                                    placeholder="Enter email">
+                                <input type="email" class="form-control" name="userEmail" id="userEmail"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone
                                     else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="userPsw">Password</label>
-                                <input type="password" class="form-control" id="userPsw" placeholder="Password">
+                                <input type="password" class="form-control" name="userPsw" id="userPsw"
+                                    placeholder="Password">
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             </div>
-                            <button type="submit" class="submitLogBtn btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id='submitLogBtn'>sign in</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Regester</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body">
+                            <form method="POST" action="/post_reg">
+                                <div class="form-group">
+                                    <label for="userEmail">Email address</label>
+                                    <input type="email" class="form-control" id="userEmail" name="userEmail"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                        anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userPsw">Password</label>
+                                    <input type="password" class="form-control" name="userPsw" id="userPsw"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary" name="postRegBtn" id='postRegBtn'>Submit
+                                    register</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
