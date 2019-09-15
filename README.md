@@ -31,3 +31,5 @@ Complete database
 API for detecting direction and distance of a tree
 Exclusive tree detection
 Better user experience
+Blockstack technology to protect user identity and location history 
+Blockstack technology to track tree inspection history, keeps local council accountable 
