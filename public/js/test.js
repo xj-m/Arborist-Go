@@ -40,11 +40,18 @@ window.addEventListener("DOMContentLoaded", function () {
     // Trigger photo take
     document.getElementById('snap').addEventListener('click', function () {
         context.drawImage(video, 0, 0, 320, 240);
-        getLocation();
+        window.location.href = 'http://localhost:1109/survey';
+        $.ajax({
+            type: 'GET',
+            url: '/survey',
+            success: function (data) {}
+        });
+        // getLocation();
 
-        exportCanvasAsPNG('canvas', filename);
-        video.style.display = "none"
-        document.getElementById('snap').display = "none"
+
+        // exportCanvasAsPNG('canvas', filename);
+        // video.style.display = "none"
+        // document.getElementById('snap').display = "none"
 
     });
 

@@ -19,7 +19,8 @@ router.get('/test2', function (req, res) {
 });
 router.post('/test2_post', (req, res) => {
     // if (isTree(req.body.url)) {
-    if (isTree('/Users/xiangjun/Desktop/Hophacks-test/public/Image/test.png')) {
+    // if (isTree('/Users/xiangjun/Desktop/Hophacks-test/public/Image/test.png')) {
+    if (true) {
         res.redirect('/test2');
     } else {
         res.redirect('/index')
