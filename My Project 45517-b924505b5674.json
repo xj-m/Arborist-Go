@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "natural-charter-253000",
+  "private_key_id": "b924505b56741f08328130929b9f188706742077",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCvHc0e+G9Kl23k\nFcyP6OjzllgzMdCBGC47ciYb1H2L/SkBHnz0w/V7sgB+O5SiomLO2PiwuEwf+s0G\nBPRsB2dwO+96PNAVmFc6tf244PwptUoMmNouSEx+qk2wSXifl4CnrZUdCsSELg+p\nzPCw3tzczrpw2iDePlQSob05tcotyvOogYdHqXsfnItHoI3IyEWlBqvUFpr3puTz\nc8FiOPQN9uVaPQo7bVhYoCJJNAIDyNxYYrQDjebaaz/0Y6snCk7OsBMe01txTqPc\nqkbd+rUQpOzA//z0FAsSo4UyiiJxa9efk14Xjp6wH2qw4jZOGissbxfWoV29Y/kZ\nheQ6lsMjAgMBAAECggEABaCViNs+6Ey5cUzqB+3aHonER9Df/GYEhlCCvP41EpyO\nBsUuCseJSfJMZcIQYrGJL1B1nWguuhBbKkhaemY6grbKWUk+/pKoqvBSOPCx6b0z\npff7euVD4AYk/Pc/cxFxRvIjCo3gBsdcJX66dVSUEFxsTVgVGk8ycG7WH9ahqpr/\nX8x0/VfKP0DGkv0uKdBNk9XJz7DA7l1cggnYlS4qCvhTdLruS+w48gQnD2+Uamsn\nWE6dcLF4PgF1ZmZEDvwPdRlmY3bmOpg9o12ObOB2bgU0YrbHMxAtvJObHYkNGGG8\nuyyuk2uHW9zuJ9o508UezPbZiPBCwkQZM/bri++ccQKBgQDbHGr2oUleNsd7azis\nnMm/F366FdkRTCQ1FUiyUo+iFm0k0ouI60AAzhovfbDDHnCy7dbxkNZY15tmSIGG\nMkPhSy5wTrL7W4Vt6IEKu6ZSSbr6uQj08RldadhQG1cxpKLsaK5i8Emm814o1mqG\nTtZ7kwtVQ6vu4XmPz0ilVidrxwKBgQDMmTyjZOH8cswWdCOq1h40XPwyO2A6R0/F\nF4AS04VvALtLtN2gkj3Eq7JOvhBFN5HPCwGzdYYWtJC2b9/mkRVi6zZVJ33Ey9Jr\nuuJFUd9J66ssJT2LjlwR+VhAYNeyJS1u3zOJmzj13ciMZP8kNOCrNnwCyDnI/Zq7\n8QBIg0qVxQKBgQDLHrMB406yajHO9fzZ95cG8O7n7u0FngJKu2pi9Sp15jhT1GLK\nENuKY4Xe1LQSjZuII/gIhG5Qeb9zuG9qShqnNhzcu/gsEBHHa6yEmKR80CDn4LSu\n7PrIoCCJUm8odCkc44YV7g85F48IaIzj6R3n/M6awlsW3irk6BG+Q/nTbQKBgHkZ\nznmMMfLh5Aj6T05EFHa7/w6gdHGqWf33zffWuWkdjr7d3Dy5stPhKNZQy4KcxLI+\n+o/FZUu1Lt69U1K+12DIhk1a5aeBWRgo8ttC/Z5cXuHvXQFojviYlPLuH12zgbPZ\na0Ds3ocw8g6fjSFaJw1QX5CqAQIFkfviR1+kTpZdAoGBAMH7b9Ul8YXpfu77yEZT\nVxE1tMsO5GyHPirhEUNveisekMyuqt9fgdz8djHta34ntbl4NgeeL1D3v5sXvtGi\nktlwpBIMcIsyMcK37MsT2LbWs+hjg7ShyeIMzIezPUjyPySsStW3ZuN6yZxJhkwF\nMH6KbXOyieYFzWkBQhNjJmoa\n-----END PRIVATE KEY-----\n",
+  "client_email": "hophacks@natural-charter-253000.iam.gserviceaccount.com",
+  "client_id": "102122699415295105785",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hophacks%40natural-charter-253000.iam.gserviceaccount.com"
+}

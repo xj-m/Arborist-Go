@@ -19,34 +19,34 @@
                 <div class="card-header">
                     <h2>The tree you just scanned!</h2>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="card-tittle">
-                    <h3>The photo of the tree</h3>
+                <div class="card-body">
+                    <div class="card-tittle">
+                        <h3>The photo of the tree</h3>
+                    </div>
+                    <!-- <img src=<%= path%> alt=""> -->
+                    <img src="Image/test.png" alt="">
+                    <div class="card-tittle">
+                        <h3>Location information</h3>
+                    </div>
+                    <ul>
+                        <li>latitude: <%= lat%></li>
+                        <li>longtitude: <%= long%></li>
+                    </ul>
+                    <div class="card-tittle">
+                        <h3>Status</h3>
+                    </div>
+                    <p>Need report</p>
+                    <form method="POST" action="/test2_post">
+                        <input type="hidden" value="Image/test.png" name="url" readonly>
+                        <button class="btn btn-primary" type="Submit">submit</button>
+                    </form>
                 </div>
-                <img src=<%= path%> alt="">
-                <div class="card-tittle">
-                    <h3>Location information</h3>
-                </div>
-                <ul>
-                    <li>latitude: <%= lat%></li>
-                    <li>longtitude: <%= long%></li>
-                </ul>
-                <div class="card-tittle">
-                    <h3>Status</h3>
-                </div>
-                <p>dangerous!</p>
-                <form method="GET" action="/">
-                    <button class="btn btn-primary" type="Submit">Login</button>
-                </form>
-                <button class="btn btn-primary">correct it!</button>
             </div>
         </div>
     </div>
-</div>
 
-<body>
+    <body>
 
-</body>
+    </body>
 
 </html>

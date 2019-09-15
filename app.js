@@ -1,7 +1,18 @@
 let express = require('express');
 var firebase = require('firebase');
 let path = require('path');
-let cookieParser = require('cookie-parser');
+// let cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+bodyParser = {
+    json: {
+        limit: '50mb',
+        extended: true
+    },
+    urlencoded: {
+        limit: '50mb',
+        extended: true
+    }
+};
 
 // firebase
 var firebaseConfig = {
@@ -23,18 +34,34 @@ let surveyRouter = require('./controllers/survey');
 let testRouter = require('./controllers/test');
 let personRouter = require('./controllers/person');
 let regRouter = require('./controllers/reg');
-
-// const errorController = require('./controllers/error');
+var bodyParser = require('body-parser');
 
 let app = express();
+// const errorController = require('./controllers/error');
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
+app.use(bodyParser.json());
+bodyParser = {
+    json: {
+        limit: '500mb',
+        extended: true
+    },
+    urlencoded: {
+        limit: '500mb',
+        extended: true
+    }
+};
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
 app.use(express.json());
 app.use(express.urlencoded({
-    extended: false
+    extended: true
 }));
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
@@ -44,7 +71,6 @@ app.use('/', surveyRouter);
 app.use('/', testRouter);
 app.use('/', personRouter);
 app.use('/', regRouter);
-
 // error handler
 // app.use(errorController.get404);
 

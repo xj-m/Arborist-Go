@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Coupon Collected</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheet/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet/modal.css" />
+    <script src="js/test2/TweenMax.min.js"></script>
+    <script src="js/test2/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('image/WechatIMG51.jpeg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        @keyframes coupon {
+            0% {
+                bottom: 100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: rotate(1080deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+                opacity: 0;
+                bottom: 0;
+            }
+        }
+
+        @-webkit-keyframes coupon {
+            0% {
+                bottom: 100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: rotate(1080deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0deg);
+                opacity: 0;
+                bottom: 0;
+            }
+        }
+
+        @-moz-keyframes coupon {
+            0% {
+                bottom: 100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                -moz-transform: rotate(1080deg);
+            }
+
+            100% {
+                -moz-transform: rotate(0deg);
+                opacity: 0;
+                bottom: 0;
+            }
+        }
+
+        @-ms-keyframes coupon {
+            0% {
+                bottom: 100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                -ms-transform: rotate(1080deg);
+            }
+
+            100% {
+                -ms-transform: rotate(0deg);
+                opacity: 0;
+                bottom: 0;
+            }
+        }
+
+        @-o-keyframes coupon {
+            0% {
+                bottom: 100%;
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                -o-transform: rotate(1080deg);
+            }
+
+            100% {
+                -o-transform: rotate(0deg);
+                opacity: 0;
+                bottom: 0;
+            }
+        }
+
+        .roll {
+            position: absolute;
+            opacity: 0;
+            animation: coupon 10s;
+            -webkit-animation: coupon 10s;
+            -moz-animation: coupon 10s;
+            -ms-animation: coupon 10s;
+            -o-animation: coupon 10s;
+            height: 80px;
+        }
+
+        .div {
+            position: fixed;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="content">
+            <button class="open-modal">Collect it!</button>
+        </div>
+
+
+
+        <div class="modal-overlay"></div>
+        <div class="modal-wrapper">
+            <div class="modal js-blur">
+                <button class="close-modal">×</button>
+                <h2>Coupon Collected!</h2>
+                <p>Congradulations on exploring an unfound tree!</p>
+            </div>
+        </div>
+
+    </div><!-- /container -->
+    <script src="js/test2/motionblur.js"></script>
+    <script src="js/test2/modal.js"></script>
+
+    <div id="zone">
+    </div>
+</body>
+
+<script>
+    (function () {
+        function cou(left, height, src) {
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            div.appendChild(img);
+            img.className = "roll";
+            img.src = src;
+            div.style.left = left + "px";
+            div.style.height = height + "px";
+            div.className = "div";
+            document.getElementById("zone").appendChild(div);
+            setTimeout(function () {
+                document.getElementById("zone").removeChild(div);
+                // console.log(window.innerHeight); 
+            }, 5000);
+        }
+        setInterval(function () {
+            var left = Math.random() * window.innerWidth;
+            var height = Math.random() * window.innerHeight;
+            var src =
+                "image/WechatIMG50.png"; //var src = "s" + Math.floor(Math.random() * 2 + 1) + ".png"; //两张图片分别为"s1.png"、"s2.png" 
+            cou(left, height, src);
+        }, 4000);
+    })();
+</script>
+
+</html>
