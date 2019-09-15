@@ -14,96 +14,30 @@
 </head>
 
 <body>
-    <div class="navbar navbar-dark bg-dark shadow-sm"><button class="btn-primary">Back to home page</button></div>
-    <div class="container">
-        <h1>Welcome <%= uid%></h1>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">Scan an report a tree</div>
-                    <div class="card-body">
-                        <div class="card-tittle"></div>
-                        <button class="btn btn-primary">Start scan</button>
-                    </div>
-                </div>
-            </div>
+    <div class="navbar navbar-dard bg-dark shadow-sm">
+        <div class="col-10 d-flex justify-content-center">
+            <h1 style="color: white">The Name Of This APP</h1>
         </div>
+        <div class="col">
+            <form method="GET" action="/get_profile">
+                <button class="btn btn-primary" type="Submit">profile</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="d-flex justify-content-center">Welcome <%= uName%></h1>
         <div class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Your Forest</h2>
-                        <!-- for make data: start -->
-                        <form method="POST" action="/person/add_tree">
-                            <div class="form-group">
-                                <label>treeLoc</label>
-                                <input type="text" class="form-control" name="treeLoc">
-                            </div>
-                            <div class="form-group">
-                                <label>status</label>
-                                <input type="text" class="form-control" name="status">
-                            </div>
-                            <div class="form-group">
-                                <label>name</label>
-                                <input type="text" class="form-control" name="name">
-                            </div>
-                            <div class="form-group">
-                                <label>date</label>
-                                <input type="text" class="form-control" name="date">
-                            </div>
-                            <div class="form-group">
-                                <label>pictures</label>
-                                <input type="text" class="form-control" name="pictures">
-                            </div>
-                            <button type="submit" class="btn btn-primary" id='postTreeBtn'>submit</button>
-                        </form>
-                        <!-- for make data: ends -->
+                        <h2>Scan an report a tree</h2>
                     </div>
                     <div class="card-body">
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Tree location</th>
-                                    <th scope="col">tree status</th>
-                                    <th scope="col">tree name</th>
-                                    <th scope="col">date</th>
-                                    <th scope="col">pictures</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <%  %>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>first user</td>
-                                    <td>100</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="card-tittle">
-                            <h3>Tree1</h3>
+                        <div class="card-tittle "></div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary">Start scan</button>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Friends Rank List</h2>
-                    </div>
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Ranking</th>
-                                <th scope="col">User Name</th>
-                                <th scope="col">score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>first user</td>
-                                <td>100</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
