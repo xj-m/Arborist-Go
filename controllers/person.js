@@ -18,4 +18,9 @@ router.post('/person/add_tree', function (req, res) {
         res.send('success')
     })
 });
+router.post('/person/del_tree', function (req, res) {
+    treeColRef.doc(req.body.id).delete().then(() => {
+        res.send('success');
+    }).catch((err) => {})
+})
 module.exports = router;

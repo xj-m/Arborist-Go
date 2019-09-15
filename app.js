@@ -22,6 +22,7 @@ let loginRouter = require('./controllers/login');
 let surveyRouter = require('./controllers/survey');
 let testRouter = require('./controllers/test');
 let personRouter = require('./controllers/person');
+let regRouter = require('./controllers/reg');
 
 // const errorController = require('./controllers/error');
 
@@ -42,6 +43,7 @@ app.use('/', loginRouter);
 app.use('/', surveyRouter);
 app.use('/', testRouter);
 app.use('/', personRouter);
+app.use('/', regRouter);
 
 // error handler
 // app.use(errorController.get404);

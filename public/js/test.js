@@ -51,6 +51,10 @@ window.addEventListener("DOMContentLoaded", function () {
         } else {
             exportCanvasAsPNG('canvas', "NULL");
         }
+        video.style.visibility = "hidden";
+        document.getElementById('snap').style.visibility = "hidden";
+        canvas.style.width = document.body.clientWidth;
+        canvas.style.height = document.body.clientHeight;
 
 
     });

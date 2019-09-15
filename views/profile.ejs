@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to the home page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-dard bg-dark shadow-sm">
+        <div class="col-10 d-flex justify-content-center">
+            <h1 style="color: white">The Name Of This APP</h1>
+        </div>
+        <div class="col">
+            <form method="GET" action="/user">
+                <button class="btn btn-primary" type="Submit">Back</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="d-flex justify-content-center">Welcome <%= uName%></h1>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Your Forest</h2>
+                        <!-- for make data: start -->
+                        <!-- <form method="POST" action="/person/add_tree">
+                            <div class="form-group">
+                                <label>treeLoc</label>
+                                <input type="text" class="form-control" name="treeLoc">
+                            </div>
+                            <div class="form-group">
+                                <label>status</label>
+                                <input type="text" class="form-control" name="status">
+                            </div>
+                            <div class="form-group">
+                                <label>name</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label>date</label>
+                                <input type="text" class="form-control" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label>pictures</label>
+                                <input type="text" class="form-control" name="pictures">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id='postTreeBtn'>submit</button>
+                        </form> -->
+                        <!-- for make data: ends -->
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">num</th>
+                                    <th scope="col">Tree location</th>
+                                    <th scope="col">tree status</th>
+                                    <th scope="col">tree name</th>
+                                    <th scope="col">date</th>
+                                    <!-- <th scope="col">pictures</th> -->
+                                    <!-- <th scope="col">del button</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div class="card-tittle d-flex justify-content-center">
+                                    <h3>Total is: <%=trees.length%></h3>
+                                </div>
+                                <% for(var i = 0;i<trees.length;i++) { %>
+                                <tr>
+                                    <th scope="row"><%= i %></th>
+                                    <td><%= trees[i].treeLoc %></td>
+                                    <td><%= trees[i].status %></td>
+                                    <td><%= trees[i].name %></td>
+                                    <td><%= trees[i].date %></td>
+                                    <!-- <td><%= trees[i].picture %></td> -->
+                                    <!-- <td>
+                                        <button class="delBtn btn btn-primary" type="button" id=<%= trees[i].id %>>Del
+                                            Rec</button>
+                                    </td> -->
+                                </tr> <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- for make data: start -->
+
+                <!-- <div class="card">
+                    <div class="card-header">
+                        <h2>create a person data</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="/person/add_person">
+                            <div class="form-group">
+                                <label>personName</label>
+                                <input type="text" class="form-control" name="personName">
+                            </div>
+                        </form>
+                    </div>
+                </div> -->
+                <!-- for make data: ends -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Friends Rank List</h2>
+                    </div>
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Ranking</th>
+                                <th scope="col">User Name</th>
+                                <th scope="col">score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>first user</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
