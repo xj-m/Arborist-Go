@@ -18,18 +18,23 @@ class Tree {
 
 
 router.get('/user', function (req, res) {
-    if (user) {
-        getTreesData().then((trees) => {
-            res.render('user', {
-                uid: user.uid,
-                trees: trees
+
+    db.collection('user').doc('uid').get().then(function (doc) {
+        const uid = doc.data().uid;
+        if (uid) {
+            getTreesData().then((trees) => {
+                res.render('user', {
+                    uid: uid,
+                    trees: trees
+                })
+            });
+        } else {
+            res.render('login', {
+                err: "please login first!"
             })
-        });
-    } else {
-        res.render('login', {
-            err: "please login first!"
-        })
-    }
+        }
+    })
+
 })
 async function getTreesData() {
     const snapshot = await treesColRef.get()
